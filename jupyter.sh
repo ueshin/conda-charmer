@@ -11,6 +11,6 @@ fi
 
 source "${_ROOT}"/_activate.sh
 
-export PYTHONPATH="${_ROOT}"/python
+export PYTHONPATH="${_ROOT}"/"${SOURCE_PATH}"
 
 jupyter notebook "${_ROOT}"/notebooks

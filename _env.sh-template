@@ -1,5 +1,8 @@
 #!/bin/bash
 
 export PATH=/usr/local/miniconda3/bin:"$PATH"
+
 export CONDA_ENV_PREFIX=''
 export ADDITIONAL_PACKAGES=()
+
+export SOURCE_PATH='python'

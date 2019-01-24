@@ -17,6 +17,6 @@ else
     export PS1="[${_BASE_NAME}:${CONDA_ENV_PREFIX}_${CONDA_ENV_ID}] \\h:\\W \\u\\\$ "
 fi
 
-cd "${_ROOT}"/python
+cd "${_ROOT}"/"${SOURCE_PATH}"
 
 bash
