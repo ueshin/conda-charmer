@@ -3,6 +3,16 @@
 _ROOT="$(cd "$(dirname "$0")"; pwd)"
 _BASE_NAME=$(basename "${_ROOT}")
 
+while getopts w: OPT
+do
+    case $OPT in
+        w)  _WORKTREE=$OPTARG
+            ;;
+    esac
+done
+
+shift $(($OPTIND - 1))
+
 source "${_ROOT}"/_env.sh
 
 if [ -z "${CONDA_ENV_PREFIX}" ]; then
@@ -17,7 +27,10 @@ else
     export PS1="[${_BASE_NAME}:${CONDA_ENV_PREFIX}_${CONDA_ENV_ID}] \\h:\\W \\u\\\$ "
 fi
 
-export PYTHONPATH="${_ROOT}"/"${SOURCE_PATH}"
-cd "$PYTHONPATH"
+if [ -z "${_WORKTREE}" ]; then
+    export PYTHONPATH="${_ROOT}"/"${SOURCE_PATH}"
+else
+    export PYTHONPATH="$(cd "${_WORKTREE}"; pwd)"
+fi
 
-bash
+cd "$PYTHONPATH" && bash
