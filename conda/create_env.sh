@@ -11,6 +11,10 @@ fi
 
 PYTHON_VERSION=${1:-3.6}
 
-conda create -y -c conda-forge --name "${CONDA_ENV_PREFIX}_${PYTHON_VERSION}" python=${PYTHON_VERSION} \
+source "${CONDA_HOME}/etc/profile.d/conda.sh"
+
+conda create -y --name "${CONDA_ENV_PREFIX}_${PYTHON_VERSION}" python=${PYTHON_VERSION}
+conda activate "${CONDA_ENV_PREFIX}_${PYTHON_VERSION}"
+conda install -y -c conda-forge \
   jupyter \
   "${ADDITIONAL_PACKAGES[@]}"

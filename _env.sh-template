@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export PATH=/usr/local/miniconda3/bin:"$PATH"
+export CONDA_HOME=/usr/local/miniconda3
 
 export CONDA_ENV_PREFIX=''
 export ADDITIONAL_PACKAGES=()

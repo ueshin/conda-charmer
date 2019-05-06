@@ -33,4 +33,4 @@ else
     export PYTHONPATH="$(cd "${_WORKTREE}"; pwd)"
 fi
 
-cd "$PYTHONPATH" && bash
+cd "$PYTHONPATH" && bash --init-file "${CONDA_HOME}/etc/profile.d/conda.sh"
