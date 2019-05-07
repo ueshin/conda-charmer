@@ -11,4 +11,4 @@ fi
 
 source "${CONDA_HOME}/etc/profile.d/conda.sh"
 
-conda create --name "${CONDA_ENV_PREFIX}_$2" --clone "${CONDA_ENV_PREFIX}_$1"
+conda create --prefix "${CONDA_ENVS}/${CONDA_ENV_PREFIX}_$2" --clone "${CONDA_ENVS}/${CONDA_ENV_PREFIX}_$1"
