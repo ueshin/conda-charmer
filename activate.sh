@@ -3,15 +3,7 @@
 _ROOT="$(cd "$(dirname "$0")"; pwd)"
 _BASE_NAME=$(basename "${_ROOT}")
 
-while getopts w: OPT
-do
-    case $OPT in
-        w)  _WORKTREE=$OPTARG
-            ;;
-    esac
-done
-
-shift $(($OPTIND - 1))
+source "${_ROOT}"/_opts.sh
 
 source "${_ROOT}"/_env.sh
 
@@ -33,4 +25,4 @@ else
     export PYTHONPATH="$(cd "${_WORKTREE}"; pwd)"
 fi
 
-cd "$PYTHONPATH" && bash --init-file "${CONDA_HOME}/etc/profile.d/conda.sh"
+cd "${PYTHONPATH}" && bash --init-file "${CONDA_HOME}/etc/profile.d/conda.sh"
