@@ -27,9 +27,8 @@ else
     export SPARK_HOME="$(cd "${_WORKTREE}"; pwd)"
 fi
 
-find "${SPARK_HOME}" -name '*.pyc' | xargs rm
+cd "${SPARK_HOME}" && \
+  ./build/sbt clean test:package -Phive -Phive-thriftserver && \
+  rm python/lib/pyspark.zip
 
-export SPARK_PREPEND_CLASSES=true
-export PYTHONPATH="$(find "${SPARK_HOME}/python/lib" -name 'py4j-*-src.zip' -type f | uniq)":"${SPARK_HOME}/python"
-
-jupyter notebook "${_ROOT}"/notebooks
+jps -v | grep Nailgun | cut -f 1 -d ' ' | xargs kill

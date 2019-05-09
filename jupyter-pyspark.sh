@@ -30,6 +30,7 @@ fi
 find "${SPARK_HOME}" -name '*.pyc' | xargs rm
 
 export SPARK_PREPEND_CLASSES=true
-export PYTHONPATH="$(find "${SPARK_HOME}/python/lib" -name 'py4j-*-src.zip' -type f | uniq)":"${SPARK_HOME}/python"
+export PYSPARK_DRIVER_PYTHON=jupyter
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook ${_ROOT}/notebooks"
 
-jupyter notebook "${_ROOT}"/notebooks
+cd "${SPARK_HOME}" && ./bin/pyspark

@@ -28,9 +28,14 @@ else
 fi
 
 if [ -z "${_WORKTREE}" ]; then
-    export PYTHONPATH="${_ROOT}"/"${SOURCE_PATH}"
+    export SPARK_HOME="${_ROOT}"/"${SOURCE_PATH}"
 else
-    export PYTHONPATH="$(cd "${_WORKTREE}"; pwd)"
+    export SPARK_HOME="$(cd "${_WORKTREE}"; pwd)"
 fi
 
-cd "$PYTHONPATH" && bash --init-file "${CONDA_HOME}/etc/profile.d/conda.sh"
+find "${SPARK_HOME}" -name '*.pyc' | xargs rm
+
+export SPARK_PREPEND_CLASSES=true
+export PYTHONPATH="$(find "${SPARK_HOME}/python/lib" -name 'py4j-*-src.zip' -type f | uniq)":"${SPARK_HOME}/python"
+
+cd "${SPARK_HOME}/python" && bash --init-file "${CONDA_HOME}/etc/profile.d/conda.sh"
