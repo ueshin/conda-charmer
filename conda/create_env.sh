@@ -17,4 +17,7 @@ conda create -y --prefix "${CONDA_ENVS}/${CONDA_ENV_PREFIX}_${PYTHON_VERSION}" p
 conda activate "${CONDA_ENVS}/${CONDA_ENV_PREFIX}_${PYTHON_VERSION}" && \
 conda install -y -c conda-forge \
   jupyter \
-  "${ADDITIONAL_PACKAGES[@]}"
+  "${ADDITIONAL_PACKAGES[@]}" && \
+  if [ -n "${REQUIREMENTS_FILE}" ]; then
+    conda install -y -c conda-forge --file "${_ROOT}/${SOURCE_PATH}/${REQUIREMENTS_FILE}"
+  fi
