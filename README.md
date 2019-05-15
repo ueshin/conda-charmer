@@ -1,6 +1,6 @@
-# pythonenv
+# conda-charmer
 
-Utilities to manage Python development environment using `conda`.
+`conda-charmer` is a package of utilities to manage Python development environment using `conda`.
 
 ## Prerequisite
 
@@ -14,16 +14,16 @@ https://conda.io/projects/conda/en/latest/user-guide/install/index.html
 
 The following example command is assuming the project name is `py-proj`. Please replace it to your project name.
 
-### Download `pythonenv`
+### Download `conda-charmer`
 
-Download ZIP file for the pythonenv package and extend as `py-proj`.
+Download ZIP file for the `conda-charmer` package and extend as `py-proj`.
 
-https://github.com/ueshin/pythonenv/archive/master.zip
+https://github.com/ueshin/conda-charmer/archive/master.zip
 
 or `git clone`:
 
 ```sh
-git clone git@github.com:ueshin/pythonenv.git py-proj
+git clone git@github.com:ueshin/conda-charmer.git py-proj
 ``` 
 
 ### Place the project files
@@ -138,4 +138,4 @@ git clone /path/to/py-proj.git master
 
 If you are `PySpark` developer, please use `pyspark` branch.
 
-https://github.com/ueshin/pythonenv/tree/pyspark
+https://github.com/ueshin/conda-charmer/tree/pyspark
