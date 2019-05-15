@@ -1,6 +1,6 @@
-# pythonenv
+# conda-charmer
 
-Utilities to manage PySpark development environment using `conda`.
+`conda-charmer` is a package of utilities to manage Python development environment using `conda`.
 
 ## Prerequisite
 
@@ -14,16 +14,16 @@ https://conda.io/projects/conda/en/latest/user-guide/install/index.html
 
 The following example command is assuming the project name is `spark`. Please replace it to your project name.
 
-### Download `pythonenv`
+### Download `conda-charmer`
 
-Download ZIP file for the pythonenv package and extend as `spark`.
+Download ZIP file for the `conda-charmer` package and extend as `spark`.
 
-https://github.com/ueshin/pythonenv/archive/pyspark.zip
+https://github.com/ueshin/conda-charmer/archive/pyspark.zip
 
 or `git clone`:
 
 ```sh
-git clone git@github.com:ueshin/pythonenv.git -b pyspark spark
+git clone git@github.com:ueshin/conda-charmer.git -b pyspark spark
 ``` 
 
 ### Place the project files
