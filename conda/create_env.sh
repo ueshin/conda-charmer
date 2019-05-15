@@ -15,9 +15,10 @@ source "${CONDA_HOME}/etc/profile.d/conda.sh"
 
 conda create -y --prefix "${CONDA_ENVS}/${CONDA_ENV_PREFIX}_${PYTHON_VERSION}" python=${PYTHON_VERSION} && \
 conda activate "${CONDA_ENVS}/${CONDA_ENV_PREFIX}_${PYTHON_VERSION}" && \
+conda config --add pinned_packages python="${PYTHON_VERSION}" --env && \
 conda install -y -c conda-forge \
   jupyter \
   "${ADDITIONAL_PACKAGES[@]}" && \
-  if [ -n "${REQUIREMENTS_FILE}" ]; then
-    conda install -y -c conda-forge --file "${_ROOT}/${SOURCE_PATH}/${REQUIREMENTS_FILE}"
-  fi
+if [ -n "${REQUIREMENTS_FILE}" ]; then
+  conda install -y -c conda-forge --file "${_ROOT}/${SOURCE_PATH}/${REQUIREMENTS_FILE}"
+fi
