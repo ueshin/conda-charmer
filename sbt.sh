@@ -13,8 +13,4 @@ else
     export SPARK_HOME="$(cd "${_WORKTREE}"; pwd)"
 fi
 
-cd "${SPARK_HOME}" && \
-  ./build/sbt clean test:package -Phive -Phive-thriftserver && \
-  rm python/lib/pyspark.zip
-
-jps -v | grep Nailgun | cut -f 1 -d ' ' | xargs kill
+cd "${SPARK_HOME}" && ./build/sbt
