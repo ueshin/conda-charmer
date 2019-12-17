@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export CONDA_ENV_ID=${1:-3.6}
+export CONDA_ENV_ID=${1:-3.7}
 
 source "${CONDA_HOME}/etc/profile.d/conda.sh"
 
