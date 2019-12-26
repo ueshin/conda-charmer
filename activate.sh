@@ -22,7 +22,9 @@ fi
 if [ -z "${_WORKTREE}" ]; then
     export PYTHONPATH="${_ROOT}"/"${SOURCE_PATH}"
 else
-    export PYTHONPATH="$(cd "${_WORKTREE}"; pwd)"
+    export PYTHONPATH="$(cd "${_WORKTREE}" && pwd)"
 fi
 
-cd "${PYTHONPATH}" && bash --init-file "${CONDA_HOME}/etc/profile.d/conda.sh"
+if [ -n "${PYTHONPATH}" ]; then
+    cd "${PYTHONPATH}" && bash --init-file "${CONDA_HOME}/etc/profile.d/conda.sh"
+fi
