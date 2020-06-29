@@ -9,7 +9,7 @@ if [ -z "${CONDA_ENV_PREFIX}" ]; then
     export CONDA_ENV_PREFIX="${_BASE_NAME}"
 fi
 
-export CONDA_ENV_ID=${1:-3.7}
+export CONDA_ENV_ID=${1:-3.8}
 
 source "${CONDA_HOME}/etc/profile.d/conda.sh"
 
