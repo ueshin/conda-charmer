@@ -161,18 +161,18 @@ Run PySpark tests (for sql module) with activating the `conda` environment.
 
 ## Work with `git worktree`
 
-If you want to use `git worktree`, I'd recommend to use `master` for the source path and place the worktrees in `worktrees`.
+If you want to use `git worktree`, I'd recommend to use `main` for the source path and place the worktrees in `worktrees`.
 
 ```sh
 cd spark
 vi _env.sh
 
-export SOURCE_PATH='master'
+export SOURCE_PATH='main'
 
 git clone /path/to/spark.git master
 ```
 
 ```sh
-(cd master && git worktree add ../worktrees/wt -b wt master)
+(cd main && git worktree add ../worktrees/wt -b wt main)
 ./activate.sh -w worktrees/wt
 ```
