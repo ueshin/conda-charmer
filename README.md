@@ -18,7 +18,7 @@ The following example command is assuming the project name is `py-proj`. Please 
 
 Download ZIP file for the `conda-charmer` package and extend as `py-proj`.
 
-https://github.com/ueshin/conda-charmer/archive/master.zip
+https://github.com/ueshin/conda-charmer/archive/main.zip
 
 or `git clone`:
 
@@ -118,19 +118,19 @@ Run `jupyter` with activating the `conda` environment.
 
 ## Work with `git worktree`
 
-If you want to use `git worktree`, I'd recommend to use `master` for the source path and place the worktrees in `worktrees`.
+If you want to use `git worktree`, I'd recommend to use `main` for the source path and place the worktrees in `worktrees`.
 
 ```sh
 cd py-proj
 vi _env.sh
 
-export SOURCE_PATH='master'
+export SOURCE_PATH='main'
 
-git clone /path/to/py-proj.git master
+git clone /path/to/py-proj.git main
 ```
 
 ```sh
-(cd master && git worktree add ../worktrees/wt -b wt master)
+(cd main && git worktree add ../worktrees/wt -b wt main)
 ./activate.sh -w worktrees/wt
 ```
 
