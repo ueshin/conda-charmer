@@ -1,10 +1,8 @@
-#!/bin/bash
-
-export CONDA_HOME=/usr/local/miniconda3
+export CONDA_PROFILE="/usr/local/miniconda3/etc/profile.d/conda.sh"
 export CONDA_ENVS="${_ROOT}/miniconda/envs"
 
 export SOURCE_PATH='python'
 
-export CONDA_ENV_PREFIX=''
+export CONDA_ENV_PREFIX="${_BASE_NAME}"
 export ADDITIONAL_PACKAGES=()
 export REQUIREMENTS_FILE=''

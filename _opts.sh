@@ -1,5 +1,3 @@
-#!/bin/bash
-
 while getopts w: OPT
 do
     case $OPT in
