@@ -11,6 +11,6 @@ fi
 
 export CONDA_ENV_ID=${1:-3.8}
 
-source "${CONDA_HOME}/etc/profile.d/conda.sh"
+source "${CONDA_PROFILE}"
 
 conda remove --prefix "${CONDA_ENVS}/${CONDA_ENV_PREFIX}_${CONDA_ENV_ID}" --all

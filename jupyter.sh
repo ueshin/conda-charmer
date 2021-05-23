@@ -7,10 +7,6 @@ source "${_ROOT}"/_opts.sh
 
 source "${_ROOT}"/_env.sh
 
-if [ -z "${CONDA_ENV_PREFIX}" ]; then
-    export CONDA_ENV_PREFIX="${_BASE_NAME}"
-fi
-
 source "${_ROOT}"/_activate.sh
 
 if [ -z "${_WORKTREE}" ]; then

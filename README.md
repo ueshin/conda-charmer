@@ -39,10 +39,10 @@ git clone /path/to/spark.git python
 
 Copy `_env.sh-template` to `_env.sh` and edit the file corresponding to your local environment.
 
-- `CONDA_HOME`: the prefix of `conda` installed path.
+- `CONDA_PROFILE`: the conda profile file path.
 - `CONDA_ENVS`: the path to store `conda` environments for the project. You can share the envs with other projects by the same path.
 - `SOURCE_PATH`: the path to the Spark project to be developed. The default is `python`.
-- `CONDA_ENV_PREFIX`: the prefix for each `conda` environment. If empty, the base directory name (`spark` in this case) will be used.
+- `CONDA_ENV_PREFIX`: the prefix for each `conda` environment.
 - `ADDITIONAL_PACKAGES`: additional packages to be installed by `conda/create_env.sh`.
 - `REQUIREMENTS_FILE`: the requirement file path relative to `SOURCE_PATH`.
 

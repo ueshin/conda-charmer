@@ -5,10 +5,6 @@ _BASE_NAME=$(basename "${_ROOT}")
 
 source "${_ROOT}"/_env.sh
 
-if [ -z "${CONDA_ENV_PREFIX}" ]; then
-    export CONDA_ENV_PREFIX="${_BASE_NAME}"
-fi
-
 source "${CONDA_HOME}/etc/profile.d/conda.sh"
 
 conda create --prefix "${CONDA_ENVS}/${CONDA_ENV_PREFIX}_$2" --clone "${CONDA_ENVS}/${CONDA_ENV_PREFIX}_$1"
