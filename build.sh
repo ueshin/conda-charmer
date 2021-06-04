@@ -14,7 +14,7 @@ else
 fi
 
 cd "${SPARK_HOME}" && \
-  ./build/sbt clean test:package -Phadoop-3.2 -Phive-2.3 -Phive-thriftserver && \
+  ./build/sbt clean test:package -Phive-thriftserver && \
   rm python/lib/pyspark.zip
 
 jps -v | grep Nailgun | cut -f 1 -d ' ' | xargs kill
