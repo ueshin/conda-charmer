@@ -23,8 +23,6 @@ find "${SPARK_HOME}" -name '*.pyc' | xargs rm
 
 export SPARK_PREPEND_CLASSES=true
 
-shift
-
 if [ "$#" = 0 ]; then
   cd "${SPARK_HOME}" && ./python/run-tests --python-executables="python" --modules="${DEFAULT_TEST_MODULES}"
 else

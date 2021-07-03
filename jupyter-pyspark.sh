@@ -25,4 +25,4 @@ export SPARK_PREPEND_CLASSES=true
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS="notebook ${_ROOT}/notebooks"
 
-cd "${SPARK_HOME}" && ./bin/pyspark
+cd "${SPARK_HOME}" && ./bin/pyspark "$@"

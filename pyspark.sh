@@ -23,4 +23,4 @@ find "${SPARK_HOME}" -name '*.pyc' | xargs rm
 
 export SPARK_PREPEND_CLASSES=true
 
-cd "${SPARK_HOME}" && ./bin/pyspark
+cd "${SPARK_HOME}" && ./bin/pyspark "$@"

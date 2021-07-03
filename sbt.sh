@@ -13,4 +13,4 @@ else
     export SPARK_HOME="$(cd "${_WORKTREE}"; pwd)"
 fi
 
-cd "${SPARK_HOME}" && ./build/sbt
+cd "${SPARK_HOME}" && ./build/sbt "$@"
