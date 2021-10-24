@@ -1,3 +1,7 @@
 if [ -n "${CONDA_ENV_PROMPT}" ]; then
     export PS1="[${CONDA_ENV_PROMPT}] \\h:\\W \\u\\\$ "
 fi
+
+if [ -f "${CONDA_ENV_PROFILE}" ]; then
+    source "${CONDA_ENV_PROFILE}"
+fi

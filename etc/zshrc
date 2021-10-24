@@ -1,3 +1,7 @@
 if [ -n "${CONDA_ENV_PROMPT}" ]; then
     export PROMPT="[${CONDA_ENV_PROMPT}] %n@%m %1d %% "
 fi
+
+if [ -f "${CONDA_ENV_PROFILE}" ]; then
+    source "${CONDA_ENV_PROFILE}"
+fi

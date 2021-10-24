@@ -21,6 +21,12 @@ else
     export SPARK_HOME="$(cd "${_WORKTREE}" && pwd)"
 fi
 
+if [ -z "${_PROFILE}" ]; then
+    export CONDA_ENV_PROFILE="${CONDA_ENV_ETC}/profile"
+else
+    export CONDA_ENV_PROFILE="${CONDA_ENV_ETC}/profile-${_PROFILE}"
+fi
+
 if [ -n "${SPARK_HOME}" ]; then
     find "${SPARK_HOME}" -name '*.pyc' | xargs rm
 
