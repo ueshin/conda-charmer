@@ -1,5 +1,6 @@
 export CONDA_PROFILE="/usr/local/miniconda3/etc/profile.d/conda.sh"
 export CONDA_ENVS="${_ROOT}/miniconda/envs"
+export CONDA_ENV_ETC="${_ROOT}/miniconda/etc"
 
 export SOURCE_PATH='python'
 
