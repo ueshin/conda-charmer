@@ -1,5 +1,9 @@
 if [ -n "${CONDA_ENV_PROMPT}" ]; then
-    export PS1="[${CONDA_ENV_PROMPT}] \\h:\\W \\u\\\$ "
+    if [ "${CONDA_ENV_ETC}/profile" != "${CONDA_ENV_PROFILE}" ]; then
+        export PS1="[${CONDA_ENV_PROMPT}:${CONDA_ENV_PROFILE#${CONDA_ENV_ETC}/profile-}] \\h:\\W \\u\\\$ "
+    else
+        export PS1="[${CONDA_ENV_PROMPT}] \\h:\\W \\u\\\$ "
+    fi
 fi
 
 if [ -f "${CONDA_ENV_PROFILE}" ]; then
