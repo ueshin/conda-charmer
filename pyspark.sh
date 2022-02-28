@@ -23,4 +23,19 @@ find "${SPARK_HOME}" -name '*.pyc' | xargs rm
 
 export SPARK_PREPEND_CLASSES=true
 
+if [ -z "${_PROFILE}" ]; then
+    export CONDA_ENV_PROFILE="${CONDA_ENV_ETC}/profile"
+else
+    if [ -f "${CONDA_ENV_ETC}/profile-${_PROFILE}" ]; then
+        export CONDA_ENV_PROFILE="${CONDA_ENV_ETC}/profile-${_PROFILE}"
+    else
+        echo "The profile not found: ${CONDA_ENV_ETC}/profile-${_PROFILE}"
+        exit 1
+    fi
+fi
+
+if [ -f "${CONDA_ENV_PROFILE}" ]; then
+    source "${CONDA_ENV_PROFILE}"
+fi
+
 cd "${SPARK_HOME}" && ./bin/pyspark "$@"
