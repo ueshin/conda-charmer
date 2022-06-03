@@ -1,8 +1,8 @@
 if [ -n "${CONDA_ENV_PROMPT}" ]; then
     if [ "${CONDA_ENV_ETC}/profile" != "${CONDA_ENV_PROFILE}" ]; then
-        export PROMPT="[${CONDA_ENV_PROMPT}:${CONDA_ENV_PROFILE#${CONDA_ENV_ETC}/profile-}] %n@%m %1d %% "
+        export PROMPT="[${CONDA_ENV_PROMPT}:${CONDA_ENV_PROFILE#${CONDA_ENV_ETC}/profile-}] ${PROMPT}"
     else
-        export PROMPT="[${CONDA_ENV_PROMPT}] %n@%m %1d %% "
+        export PROMPT="[${CONDA_ENV_PROMPT}] ${PROMPT}"
     fi
 fi
 
