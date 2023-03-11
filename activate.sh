@@ -33,7 +33,7 @@ else
 fi
 
 if [ -n "${SPARK_HOME}" ]; then
-    find "${SPARK_HOME}" -name '*.pyc' | xargs rm
+    find "${SPARK_HOME}" -name '*.pyc' | xargs rm -f
 
     export SPARK_PREPEND_CLASSES=true
     export PYTHONPATH="$(find "${SPARK_HOME}/python/lib" -name 'py4j-*-src.zip' -type f | uniq)":"${SPARK_HOME}/python"
