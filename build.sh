@@ -29,7 +29,9 @@ if [ -f "${CONDA_ENV_PROFILE}" ]; then
 fi
 
 cd "${SPARK_HOME}" && \
-  ./build/sbt clean test:package -Phive-thriftserver && \
+  set -x && \
+  ./build/sbt $_CLEAN test:package -Phive-thriftserver && \
+  set +x && \
   rm python/lib/pyspark.zip
 
 jps -v | grep Nailgun | cut -f 1 -d ' ' | xargs kill
