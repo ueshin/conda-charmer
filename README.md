@@ -64,7 +64,7 @@ Create a new `conda` environment.
 ./conda/create_env.sh [python_version] [env_suffix]
 ```
 
-- `python_version`: the default is `3.9`. the python version will be used as the suffix of the new `conda` environment.
+- `python_version`: the default is `3.10`. the python version will be used as the suffix of the new `conda` environment.
 - `env_suffix`: If `env_suffix` is not specified, `python_version` will be used.
 
 ### `conda/clone_env.sh`
@@ -83,7 +83,7 @@ Remove the `conda` environment.
 ./conda/remove_env.sh [env_suffix]
 ```
 
-- `env_suffix`: If `env_suffix` is not specified, `3.9` will be used.
+- `env_suffix`: If `env_suffix` is not specified, `3.10` will be used.
 
 ### `conda/update_conda.sh`
 
@@ -102,7 +102,7 @@ Activate and run child shell the `conda` environment and `cd` to the worktree pa
 ```
 
 - `worktree_path`: If `-w worktree_path` is not specified, the `SOURCE_PATH` will be used.
-- `env_suffix`: If `env_suffix` is not specified, `3.9` will be used.
+- `env_suffix`: If `env_suffix` is not specified, `3.10` will be used.
 
 To disable the environment, just `exit` from the shell.
 
@@ -115,7 +115,7 @@ Run `jupyter` with activating the `conda` environment.
 ```
 
 - `worktree_path`: If `-w worktree_path` is not specified, the `SOURCE_PATH` will be used.
-- `env_suffix`: If `env_suffix` is not specified, `3.9` will be used.
+- `env_suffix`: If `env_suffix` is not specified, `3.10` will be used.
 
 ## Work with `git worktree`
 

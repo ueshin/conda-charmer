@@ -9,7 +9,7 @@ if [ -z "${CONDA_ENV_PREFIX}" ]; then
     export CONDA_ENV_PREFIX="${_BASE_NAME}"
 fi
 
-export CONDA_ENV_ID=${1:-3.9}
+export CONDA_ENV_ID=${1:-3.10}
 
 source "${CONDA_PROFILE}"
 
