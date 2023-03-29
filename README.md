@@ -98,9 +98,10 @@ Update the `conda` command.
 Build the Spark. This is needed prior to run PySpark.
 
 ```sh
-./build.sh [-w worktree_path]
+./build.sh [-c] [-w worktree_path]
 ```
 
+- If `-c` is specified, the clean build will be used; otherwise the incremental build will be used.
 - `worktree_path`: If `-w worktree_path` is not specified, the `SOURCE_PATH` will be used.
 
 ### `activate.sh`
