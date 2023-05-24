@@ -15,6 +15,7 @@ conda activate "${CONDA_ENVS}/${CONDA_ENV_PREFIX}_${CONDA_ENV_ID}" && \
 conda config --add pinned_packages python="${PYTHON_VERSION}" --env && \
 pip install -U \
   jupyter \
+  pipdeptree \
   "${ADDITIONAL_PACKAGES[@]}" && \
 if [ -n "${REQUIREMENTS_FILE}" ]; then
   pip install -U -r "${_ROOT}/${SOURCE_PATH}/${REQUIREMENTS_FILE}"
