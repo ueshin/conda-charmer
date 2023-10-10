@@ -1,4 +1,4 @@
-export CONDA_ENV_ID=${1:-3.10}
+export CONDA_ENV_ID=${1:-${CONDA_ENV_DEFAULT_ID:-3.10}}
 
 source "${CONDA_PROFILE}"
 
