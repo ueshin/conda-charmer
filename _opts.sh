@@ -1,11 +1,13 @@
-while getopts w:p:c OPT
+while getopts w:p:ct OPT
 do
     case $OPT in
         w)  _WORKTREE=$OPTARG
             ;;
         p)  _PROFILE=$OPTARG
             ;;
-        c)  _CLEAN=clean
+        c)  _CLEAN='clean'
+            ;;
+        t)  _TEST='test:'
             ;;
     esac
 done

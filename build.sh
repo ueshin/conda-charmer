@@ -30,7 +30,7 @@ fi
 
 cd "${SPARK_HOME}" && \
   set -x && \
-  ./build/sbt $_CLEAN test:package -Phive-thriftserver && \
+  ./build/sbt ${_CLEAN} ${_TEST}package -Phive-thriftserver && \
   set +x && \
   rm python/lib/pyspark.zip
 
