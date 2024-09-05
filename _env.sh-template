@@ -10,3 +10,5 @@ export ADDITIONAL_PACKAGES=()
 export REQUIREMENTS_FILE=''
 
 export DEFAULT_TEST_MODULES='pyspark-sql'
+
+export NOTEBOOK_PATH="${_ROOT}/notebooks"

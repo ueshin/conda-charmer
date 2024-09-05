@@ -35,4 +35,4 @@ if [ -f "${CONDA_ENV_PROFILE}" ]; then
     source "${CONDA_ENV_PROFILE}"
 fi
 
-jupyter notebook "${_ROOT}"/notebooks
+jupyter notebook "${NOTEBOOK_PATH}"

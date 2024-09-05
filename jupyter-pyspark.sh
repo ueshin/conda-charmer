@@ -23,7 +23,7 @@ find "${SPARK_HOME}" -name '*.pyc' | xargs rm
 
 export SPARK_PREPEND_CLASSES=true
 export PYSPARK_DRIVER_PYTHON=jupyter
-export PYSPARK_DRIVER_PYTHON_OPTS="notebook ${_ROOT}/notebooks"
+export PYSPARK_DRIVER_PYTHON_OPTS="notebook ${NOTEBOOK_PATH}"
 
 if [ -z "${_PROFILE}" ]; then
     export CONDA_ENV_PROFILE="${CONDA_ENV_ETC}/profile"
