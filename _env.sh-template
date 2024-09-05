@@ -8,3 +8,5 @@ export SOURCE_PATH='python'
 export CONDA_ENV_PREFIX="${_BASE_NAME}"
 export ADDITIONAL_PACKAGES=()
 export REQUIREMENTS_FILE=''
+
+export NOTEBOOK_PATH="${_ROOT}/notebooks"
