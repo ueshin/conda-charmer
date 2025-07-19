@@ -5,7 +5,7 @@ _BASE_NAME=$(basename "${_ROOT}")
 
 source "${_ROOT}"/_env.sh
 
-PYTHON_VERSION="${1:-3.10}"
+PYTHON_VERSION="${1:-${CONDA_ENV_DEFAULT_ID:-3.12}}"
 CONDA_ENV_ID="${2:-${PYTHON_VERSION}}"
 
 source "${CONDA_PROFILE}"
